@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Selamat Ulang Tahun!</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(to bottom right, #ff69b4, #800080);
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      overflow: hidden;
+    }
+
+    .message {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 32px;
+      color: white;
+      text-shadow: 2px 2px 4px black;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .cake-area {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .cake {
+      position: relative;
+      width: 180px;
+    }
+
+    .tier {
+      height: 40px;
+      border-radius: 10px;
+      margin: 5px auto;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 20px;
+      text-shadow: 2px 2px 3px black;
+    }
+
+    .tier1 { width: 100px; background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet); }
+    .tier2 { width: 140px; background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red); }
+    .tier3 { width: 180px; background: linear-gradient(to right, orange, pink, purple, violet); }
+
+    .candle {
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      width: 12px;
+      height: 30px;
+      background: white;
+      border-radius: 3px;
+      transform: translateX(-50%);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+
+    .flame {
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      width: 12px;
+      height: 12px;
+      background: orange;
+      border-radius: 50%;
+      transform: translateX(-50%);
+      animation: flicker 0.2s infinite alternate;
+      box-shadow: 0 0 10px orange;
+    }
+
+    @keyframes flicker {
+      0% { transform: translateX(-50%) scale(1); opacity: 0.8; }
+      100% { transform: translateX(-50%) scale(1.2); opacity: 1; }
+    }
+
+    .flowers {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 5px;
+    }
+
+    .flower {
+      width: 10px;
+      height: 10px;
+      background: pink;
+      border-radius: 50%;
+      box-shadow: 0 0 3px white;
+      animation: bloom 2s infinite alternate;
+    }
+
+    @keyframes bloom {
+      from { transform: scale(1); }
+      to { transform: scale(1.3); }
+    }
+
+    .cat {
+      font-size: 80px;
+      position: absolute;
+      right: 15%;
+      bottom: 50px;
+      transform: rotate(-10deg);
+      animation: wiggle 2s infinite ease-in-out;
+    }
+
+    @keyframes wiggle {
+      0% { transform: rotate(-10deg); }
+      50% { transform: rotate(10deg); }
+      100% { transform: rotate(-10deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="message">
+    🎂 Selamat Ulang Tahun Orang Tersayang! 🎉<br>
+    Semoga selalu bahagia & penuh cinta ❤️
+  </div>
+
+  <div class="cake-area">
+    <div class="cake">
+      <div class="candle">
+        <div class="flame"></div>
+      </div>
+      <div class="flowers">
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+      </div>
+      <div class="tier tier1">🌸</div>
+      <div class="tier tier2">🌼</div>
+      <div class="tier tier3">🌺</div>
+    </div>
+
+    <div class="cat">🐱</div>
+  </div>
+</body>
+</html>
